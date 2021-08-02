@@ -1,0 +1,18 @@
+.item {
+  background-color: rgb(80, 3, 90);
+  margin: 1rem auto;
+  padding: 1rem 5rem;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item.completed {
+  background-color: #100d55;
+  text-decoration: line-through;
+}
+
+.clearButton {
+  display: center;
+}
