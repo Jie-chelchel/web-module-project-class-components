@@ -60,11 +60,23 @@ class App extends React.Component {
     });
   };
 
+  searchTasks = (searchValue) => {
+    console.log(searchValue);
+    this.setState({
+      tasks: this.state.tasks.filter((task) => {
+        return task.task.includes(searchValue);
+      }),
+    });
+  };
+
   render() {
     return (
       <AppStyle>
         <h2>Welcome to your Todo App!</h2>
-        <TodoForm onSubmitForm={this.formSubmitHandler} />
+        <TodoForm
+          onSubmitForm={this.formSubmitHandler}
+          onSearchTasks={this.searchTasks}
+        />
         <TodoList
           tasks={this.state.tasks}
           onHandleCompeted={this.handleCompletedTask}

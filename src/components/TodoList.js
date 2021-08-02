@@ -11,15 +11,20 @@ const TodoListStyle = styled.div`
   width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
+  & .singleTask {
+    display: center;
+    width: 80%;
+  }
   & button {
     background: #16474a;
     color: white;
     margin: 1rem;
-    margin-left: 20rem;
-
+    width: 30%;
     padding: 0.5rem 1rem;
     border-radius: 10px;
+    display: center;
   }
 `;
 
@@ -43,9 +48,8 @@ class TodoList extends Component {
             );
           })}
         </div>
-        <div>
-          <button onClick={this.clearCompletedTasks}>Clear completed </button>
-        </div>
+
+        <button onClick={this.clearCompletedTasks}>Clear completed </button>
       </TodoListStyle>
     );
   }
